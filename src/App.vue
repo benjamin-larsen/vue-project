@@ -8,14 +8,14 @@ export default {
 
     return function () {
       var arr = [
-        h("div", "ahh 1")
+        h("div", { key: "uno" }, "ahh 1")
       ]
 
       if (someVar.value) {
-        arr.push(h("div", "ahh 2"))
+        arr.push(h("div", { key: "dos" }, "ahh 2"))
       }
 
-      arr.push(h("div", { id: "someID" }, "ahh 3"))
+      arr.push(h("div", { key: "tres", id: "someID" }, "ahh 3"))
 
       return arr
     }
